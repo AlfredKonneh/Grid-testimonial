@@ -1,0 +1,173 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Barlow Semi Condensed;
+  font-size: 1.5rem;
+  line-height: 1;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.daniel {
+  background: #7337c8;
+  position: relative;
+  color: #fff3ff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.quote {
+  width: 6rem;
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.figure {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.name {
+  margin: 1rem 1rem 0;
+}
+
+.title {
+  margin: 0 2rem;
+}
+
+.experience {
+  position: relative;
+  z-index: 222;
+}
+
+.image {
+  border: 2px solid dodgerblue;
+  border-radius: 50%;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.jonatha {
+  background: #49556b;
+  color: #525866;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: #fcffff;
+}
+
+.jeanette {
+  background: #ffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.patrick {
+  background: #18202d;
+  color: #bfc6d0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.kira {
+  background: #ffff;
+  color: #525866;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.container {
+  margin: 1rem;
+  max-width: fit-content;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "head1 head2 head3 head4" "foot1 foot2 foot3 foot4";
+    width: auto;
+    height: 100%;
+  }
+
+  body{
+    font-size: 1.3rem;
+  }
+
+  .container{
+    margin: 3rem;
+    width: auto;
+  }
+
+  .daniel {
+    grid-column: span 2;
+  }
+
+  .kira {
+    grid-area: head4;
+    grid-row: span 2;
+    max-height: 100%;
+  }
+
+  .patrick {
+    grid-area: foot2;
+    grid-column: span 2;
+  }
+
+  .jeanette {
+    grid-row: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "head1 head2 head3 head4" "foot1 foot2 foot3 foot4";
+    margin: 7rem;
+  }
+
+  .container {
+    width: auto;
+    margin: auto;
+  }
+
+  .daniel {
+    grid-column: span 2;
+  }
+
+  .kira {
+    grid-area: head4;
+    grid-row: span 2;
+  }
+
+  .patrick {
+    grid-area: foot2;
+    grid-column: span 2;
+  }
+
+  .jeanette {
+    grid-row: 2;
+  }
+}
